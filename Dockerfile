@@ -9,4 +9,5 @@ RUN unzip fitcento.zip
 RUN cp -rvf fitcento/* .
 RUN rm -rf fitcento fitcento.zip
 CMD ["/user/sbin/httpd","-D","FOREGROUND"]
+ENTRYPOINT ["bash","entrypoint.prod.sh"]
 EXPOSE 80
